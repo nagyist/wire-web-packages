@@ -575,7 +575,7 @@ export class Account<T = any> extends EventEmitter {
     const createMlsClient = !!this.cryptoProtocolConfig?.mls;
     this.logger.info(`Creating new client {mls: ${createMlsClient}}`);
     const coreCryptoClient = await this.initCoreCrypto(this.apiClient.context, entropyData);
-    await this.coreCryptoClient?.proteusInit();
+    await coreCryptoClient.proteusInit();
 
     const registeredClient = await this.service.client.register(
       loginData,

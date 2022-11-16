@@ -24,9 +24,11 @@ import {CoreCrypto} from '@wireapp/core-crypto/platforms/web/corecrypto';
 import {Encoder} from 'bazinga64';
 
 import {APIClient} from '@wireapp/api-client';
+import {keys as ProteusKeys} from '@wireapp/proteus';
 import {CRUDEngine} from '@wireapp/store-engine';
 
 import {CryptographyService} from '../cryptography/';
+import {uploadedPrekeysCounterStore} from '../messagingProtocols/proteus/ProteusService/stores/uploadedPrekeysCounterStore';
 
 import {ClientInfo, ClientBackendRepository, ClientDatabaseRepository} from './';
 
@@ -115,16 +117,15 @@ export class ClientService {
       throw new Error(`Can't register client of type "${ClientType.NONE}"`);
     }
 
-    //const serializedPreKeys: PreKey[] = await this.cryptographyService.createCryptobox(entropyData);
-    // TODO generate and upload prekeys to backend
-    // question: How do we know which ID to use to generate prekeys ? since we don't handle the state of the prekeys already generated we cannot really know which ID to use
     const prekeys: PreKey[] = [];
+
     for (let i = 0; i < nbPrekeys; i++) {
       const id = i;
       const key = await coreCryptoClient.proteusNewPrekey(i);
       prekeys.push({id, key: Encoder.toBase64(key).asString});
     }
-    const lastPrekeyId = 65535;
+
+    const lastPrekeyId = ProteusKeys.PreKey.MAX_PREKEY_ID;
     const lastPrekeyBytes = await coreCryptoClient.proteusNewPrekey(lastPrekeyId);
     const lastPrekey = {id: lastPrekeyId, key: Encoder.toBase64(lastPrekeyBytes).asString};
 
@@ -144,6 +145,9 @@ export class ClientService {
     const client = await this.backend.postClient(newClient);
 
     await this.createLocalClient(client, this.apiClient.context.domain);
+
+    //save the number of initially uploaded prekeys in localStorage
+    uploadedPrekeysCounterStore.setCount(prekeys.length);
 
     return client;
   }
