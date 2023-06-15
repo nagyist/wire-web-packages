@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/wireapp/wire-web-packages/compare/@wireapp/commons@5.0.4...@wireapp/commons@5.2.0) (2023-06-15)
+
+### Features
+
+* update typescript ([#5115](https://github.com/wireapp/wire-web-packages/issues/5115)) ([f1f39de](https://github.com/wireapp/wire-web-packages/commit/f1f39dee4d5985980b187dc00199beeb1e849f55))
+
 # [5.1.0](https://github.com/wireapp/wire-web-packages/compare/@wireapp/commons@5.0.4...@wireapp/commons@5.1.0) (2023-05-04)
 
 ### Features

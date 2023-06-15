@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [41.0.0](https://github.com/wireapp/wire-web-packages/compare/@wireapp/core@37.5.2...@wireapp/core@41.0.0) (2023-06-15)
+
+### Bug Fixes
+
+* address api-client import ([72293f5](https://github.com/wireapp/wire-web-packages/commit/72293f5fc51f4484e6fa6e5134dca65299330c64))
+* autofix prettier issues ([440d143](https://github.com/wireapp/wire-web-packages/commit/440d143410be65af3909f0b848aa11324c26808b))
+* Avoid crashing when a mismatch happens on a domain we are not aware of ([#4929](https://github.com/wireapp/wire-web-packages/issues/4929)) ([958ee22](https://github.com/wireapp/wire-web-packages/commit/958ee22629283942e6ea87f5e15521f421bb2930))
+* Avoid init MLS twice ([#4782](https://github.com/wireapp/wire-web-packages/issues/4782)) ([e0bd119](https://github.com/wireapp/wire-web-packages/commit/e0bd1198b6bda8af84454197166255abc357ec8f))
+* Await for proteus session migration before initing coreCrypto ([#4765](https://github.com/wireapp/wire-web-packages/issues/4765)) ([f829c75](https://github.com/wireapp/wire-web-packages/commit/f829c750d325f4beca78c7012384930e9e9c7928))
+* Await incoming event handler ([#4866](https://github.com/wireapp/wire-web-packages/issues/4866)) ([b98d83e](https://github.com/wireapp/wire-web-packages/commit/b98d83e291b9c170464fe8f83e2163ea058b8d97))
+* **core:** wait until corecrypto is ready to call .wipe method [FS-1562] ([#4972](https://github.com/wireapp/wire-web-packages/issues/4972)) ([413a149](https://github.com/wireapp/wire-web-packages/commit/413a14971648cd5f9e2106553e4d94a059a0414f))
+* Correct type for mls failed_to_send (FS-2030) ([#5187](https://github.com/wireapp/wire-web-packages/issues/5187)) ([18b86ac](https://github.com/wireapp/wire-web-packages/commit/18b86ac0490aad6d37657180333761f353942664))
+* Do call onNewPrekeys handler on cryptobox wrapper ([#4789](https://github.com/wireapp/wire-web-packages/issues/4789)) ([973624e](https://github.com/wireapp/wire-web-packages/commit/973624e059c9e49d4dd4edc452c266d1fa2d534f))
+* Do not consume prekeys when listing members-clients of a conversation ([#4932](https://github.com/wireapp/wire-web-packages/issues/4932)) ([c6ffa42](https://github.com/wireapp/wire-web-packages/commit/c6ffa4217df8a3fc28aef04786392df575f4b097))
+* Do not try to fetch clients when no users are given ([#4968](https://github.com/wireapp/wire-web-packages/issues/4968)) ([f01cd78](https://github.com/wireapp/wire-web-packages/commit/f01cd785698434fe778590e2a9a000c08771d8e8))
+* Enable CoreCrypto if user has already started using it ([#4928](https://github.com/wireapp/wire-web-packages/issues/4928)) ([203d1b4](https://github.com/wireapp/wire-web-packages/commit/203d1b44d21164527b0d237fff6db62f6e9356bf))
+* Fix initClient type signature ([295d137](https://github.com/wireapp/wire-web-packages/commit/295d137db2ee3aec524e455fedcf9b65f39c7a55))
+* Improve fetchAllParticipantsClient types ([bc660e8](https://github.com/wireapp/wire-web-packages/commit/bc660e8e3e105aabaaba42115fb3ad7be36393aa))
+* Improve logging level ([#4768](https://github.com/wireapp/wire-web-packages/issues/4768)) ([4800002](https://github.com/wireapp/wire-web-packages/commit/4800002e50a28e0b399c69f0fafb75795ff8842e))
+* Improve MLS backend response types ([96d8c6b](https://github.com/wireapp/wire-web-packages/commit/96d8c6b5cbabe119337f409447301b3f79dbdeab))
+* Improve MLS backend response types ([#4864](https://github.com/wireapp/wire-web-packages/issues/4864)) ([af02540](https://github.com/wireapp/wire-web-packages/commit/af025403eeae576e25a1a071f76576cf3ac581b3))
+* Improve prekeys tracking between client and backend ([#4967](https://github.com/wireapp/wire-web-packages/issues/4967)) ([388902c](https://github.com/wireapp/wire-web-packages/commit/388902cf08f0f5394143bad44f850683f6c3daff))
+* Improve secretKey generator to handle multiple system crypto ([#4885](https://github.com/wireapp/wire-web-packages/issues/4885)) ([bccadbf](https://github.com/wireapp/wire-web-packages/commit/bccadbfd9afebc9f3f9a3a1637f929f4d8fa0199))
+* Init proteus before generating prekey in coreCrypto ([7482178](https://github.com/wireapp/wire-web-packages/commit/7482178321b50439c5e52af25d4fb56d4b59e20f))
+* Make sessionId migration resumable ([3f57752](https://github.com/wireapp/wire-web-packages/commit/3f577528183a569f1754f4be9d622bcba1a0adc3))
+* Make sure cryptobox and coreCrypto identity are deleted when needed ([#4887](https://github.com/wireapp/wire-web-packages/issues/4887)) ([6f865a9](https://github.com/wireapp/wire-web-packages/commit/6f865a9281bf5b5da29dfcdb84e235152fff463b))
+* Make sure current client is not duplicated in database ([#4992](https://github.com/wireapp/wire-web-packages/issues/4992)) ([9a86fb1](https://github.com/wireapp/wire-web-packages/commit/9a86fb1e50ce0ae5f543b954b5c0498866028d17))
+* More flexible useVersion api ([#4944](https://github.com/wireapp/wire-web-packages/issues/4944)) ([a328bfe](https://github.com/wireapp/wire-web-packages/commit/a328bfe85359fd371256e79b2545b50f89636ec2))
+* Reset CoreCrypto instance when client is registered ([#4926](https://github.com/wireapp/wire-web-packages/issues/4926)) ([a72fa5e](https://github.com/wireapp/wire-web-packages/commit/a72fa5e13ae38dfbbe071eee6359f5c9e9a0f8b2))
+* Use qualifiedIds when querying single conversation ([#4807](https://github.com/wireapp/wire-web-packages/issues/4807)) ([c0f19a5](https://github.com/wireapp/wire-web-packages/commit/c0f19a54ee5920c075ae62d32dfb1d88b5812d9a))
+* Warn consumer that some clients have been deleted ([#4914](https://github.com/wireapp/wire-web-packages/issues/4914)) ([e3376d2](https://github.com/wireapp/wire-web-packages/commit/e3376d27f5a26f0eb8656f24ea49389835ba6000))
+
+### Code Refactoring
+
+* Sunset non-domain-aware message sending ([#4927](https://github.com/wireapp/wire-web-packages/issues/4927)) ([6828876](https://github.com/wireapp/wire-web-packages/commit/6828876ce3a37b95804c55ecc040a9dd8dfe8d65))
+
+### Features
+
+* Add a way to reset local device identity ([f956ebe](https://github.com/wireapp/wire-web-packages/commit/f956ebe17a2eea65f0193c68a7eb40620c430574))
+* Add method to join mls conference subconversation ([#4747](https://github.com/wireapp/wire-web-packages/issues/4747)) ([971e868](https://github.com/wireapp/wire-web-packages/commit/971e868f6f20989eb0e31d0b3e7cf308e8afb20e))
+* add persistance option to TaskScheduler ([#5188](https://github.com/wireapp/wire-web-packages/issues/5188)) ([09bc24d](https://github.com/wireapp/wire-web-packages/commit/09bc24d3221b6f5130b081080e51d87bbb29cd4f))
+* allow partial user listing for federated backends ([#4994](https://github.com/wireapp/wire-web-packages/issues/4994)) ([51f2545](https://github.com/wireapp/wire-web-packages/commit/51f25456fb48e6a6a1e8837c1e40f0496540f03c))
+* **core, api-client:** leave stale subconversations after crash [FS-1564] ([#4912](https://github.com/wireapp/wire-web-packages/issues/4912)) ([b42de93](https://github.com/wireapp/wire-web-packages/commit/b42de937a8a6189e77b4934aca4c251442672a02))
+* **core, api-client:** mls conference improvements ([#4811](https://github.com/wireapp/wire-web-packages/issues/4811)) ([73b1664](https://github.com/wireapp/wire-web-packages/commit/73b166494ecc83ed08a9af99a95eac87422eefff))
+* **core:** access last resort prekey and its id from corecrypto ([#4889](https://github.com/wireapp/wire-web-packages/issues/4889)) ([d376337](https://github.com/wireapp/wire-web-packages/commit/d376337c7172ba339a0e87dc7e73a58692a15bb5))
+* **core:** allow retrying to send asset metadatas on an existing message ([#4995](https://github.com/wireapp/wire-web-packages/issues/4995)) ([3553d2a](https://github.com/wireapp/wire-web-packages/commit/3553d2a71b43a890ea99c4d6f479b222dd758bd0))
+* **core:** expose get subconversation in conversation service ([#4808](https://github.com/wireapp/wire-web-packages/issues/4808)) ([8fd3de5](https://github.com/wireapp/wire-web-packages/commit/8fd3de52c3b773853552b8a33d257042eb015e88))
+* **core:** expose getClientIds method [FS-1285] ([#4748](https://github.com/wireapp/wire-web-packages/issues/4748)) ([07b009b](https://github.com/wireapp/wire-web-packages/commit/07b009b6841fb5fa167c369ef086cb87d4b46cb9))
+* **core:** Return federated users that could not receive a message ([#4844](https://github.com/wireapp/wire-web-packages/issues/4844)) ([9022e10](https://github.com/wireapp/wire-web-packages/commit/9022e102afb24ddbf99f07be7cd86178df086a2d))
+* Emit event when MLS conversation epoch changes ([#4812](https://github.com/wireapp/wire-web-packages/issues/4812)) ([d041119](https://github.com/wireapp/wire-web-packages/commit/d041119220c0a71093eb4242b86ec2fcb89e8ddb))
+* expose material key renewal api ([#4854](https://github.com/wireapp/wire-web-packages/issues/4854)) ([feab950](https://github.com/wireapp/wire-web-packages/commit/feab9507f6d7d2956af35c1c52e5411947dec62a))
+* Forward users for which message could not be encrypted to sender ([#4949](https://github.com/wireapp/wire-web-packages/issues/4949)) ([0797eff](https://github.com/wireapp/wire-web-packages/commit/0797eff2926d9665d4c0a23e704a27d0fc50c97f))
+* Have both CoreCrypto and Cryptobox as crypto client options ([#4773](https://github.com/wireapp/wire-web-packages/issues/4773)) ([2cc1815](https://github.com/wireapp/wire-web-packages/commit/2cc181561eb36ee99f8d8e4bc24eebf5446e9737))
+* Keep track of subconversation group ids ([#4764](https://github.com/wireapp/wire-web-packages/issues/4764)) ([8095373](https://github.com/wireapp/wire-web-packages/commit/809537330242c16db95c259074383db4280d671d))
+* Replace cryptobox with CoreCrypto ([#4622](https://github.com/wireapp/wire-web-packages/issues/4622)) ([a169e7e](https://github.com/wireapp/wire-web-packages/commit/a169e7ebe1b03f238b4b0a6657e46f62ec1dafc3))
+* Return failed users when sending mls message (FS-2030) ([#5186](https://github.com/wireapp/wire-web-packages/issues/5186)) ([93b01d8](https://github.com/wireapp/wire-web-packages/commit/93b01d86f9cba1f09c7ffdc7084c8e8c777ffaf1))
+* update @wireapp/core-crypto to latest version with ACME support ([#4884](https://github.com/wireapp/wire-web-packages/issues/4884)) ([da922b7](https://github.com/wireapp/wire-web-packages/commit/da922b7bd10f94b6cf76209d4ddb4482845138a8))
+* update core-crypto ([#5208](https://github.com/wireapp/wire-web-packages/issues/5208)) ([ef36ad0](https://github.com/wireapp/wire-web-packages/commit/ef36ad0f24f066ffbd83fb03dbade7f65dd5d09a))
+* update reaction type ([#4973](https://github.com/wireapp/wire-web-packages/issues/4973)) ([4cb5773](https://github.com/wireapp/wire-web-packages/commit/4cb577367b725381baec6707e8cbfaeca0b8bad9))
+* update typescript ([#5115](https://github.com/wireapp/wire-web-packages/issues/5115)) ([f1f39de](https://github.com/wireapp/wire-web-packages/commit/f1f39dee4d5985980b187dc00199beeb1e849f55))
+* Use latest coreCrypto decryption error handling ([#4865](https://github.com/wireapp/wire-web-packages/issues/4865)) ([9b01c44](https://github.com/wireapp/wire-web-packages/commit/9b01c4473f6d8a7a34a0b6993aaa43f87e6f1f98))
+* user leaves mls conference call [FS-1288] ([#4834](https://github.com/wireapp/wire-web-packages/issues/4834)) ([fe31c0a](https://github.com/wireapp/wire-web-packages/commit/fe31c0a4da091a137d9633f8b50dbbac70cfc45a))
+* Warn consumer that some prekeys could not be fetch when encrypting a message ([#4931](https://github.com/wireapp/wire-web-packages/issues/4931)) ([3c7e0eb](https://github.com/wireapp/wire-web-packages/commit/3c7e0eb59cbd34f25e11469a9b645cb8f2c306d2))
+
+### BREAKING CHANGES
+
+* The return type of postListUser will now always wrap the result in a full UsersResponse
+* Will not be compatible with a backend that only supports api v0 (backends that are >1 year old). You will now be forced to pass fully qualified ID when calling method that need conversation or user identification
+* The login and init method now do not have the possibility to also init the client, it should be done in a separate step.
+
 ## [40.5.2](https://github.com/wireapp/wire-web-packages/compare/@wireapp/core@40.5.1...@wireapp/core@40.5.2) (2023-06-13)
 
 **Note:** Version bump only for package @wireapp/core

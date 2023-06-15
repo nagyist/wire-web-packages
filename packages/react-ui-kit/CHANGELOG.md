@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.8.0](https://github.com/wireapp/wire-web-packages/compare/@wireapp/react-ui-kit@9.3.0...@wireapp/react-ui-kit@9.8.0) (2023-06-15)
+
+### Bug Fixes
+
+* change default font weight from 300 to 400 [ACC-436] ([#4813](https://github.com/wireapp/wire-web-packages/issues/4813)) ([c5e847a](https://github.com/wireapp/wire-web-packages/commit/c5e847a63c20fde64ec1f019aa747faa996ebc12))
+
+### Features
+
+* add verification shield icon ([#5034](https://github.com/wireapp/wire-web-packages/issues/5034)) ([699a822](https://github.com/wireapp/wire-web-packages/commit/699a8225c502d114ed30f94ed1ad246d150edf5f))
+* improve typing for color packages ([#4930](https://github.com/wireapp/wire-web-packages/issues/4930)) ([4910695](https://github.com/wireapp/wire-web-packages/commit/491069528d53247384f6d6cdd2bb58aa5f921e3a))
+* **react-ui-kit:** Implement new tooltip ([#5012](https://github.com/wireapp/wire-web-packages/issues/5012)) ([ea4842e](https://github.com/wireapp/wire-web-packages/commit/ea4842ee14c7cda9a18a3a55691dfed749a407f1))
+* update typescript ([#5115](https://github.com/wireapp/wire-web-packages/issues/5115)) ([f1f39de](https://github.com/wireapp/wire-web-packages/commit/f1f39dee4d5985980b187dc00199beeb1e849f55))
+
 ## [9.7.4](https://github.com/wireapp/wire-web-packages/compare/@wireapp/react-ui-kit@9.7.3...@wireapp/react-ui-kit@9.7.4) (2023-06-13)
 
 **Note:** Version bump only for package @wireapp/react-ui-kit
